@@ -907,10 +907,10 @@ eof;
                 $err = "请填写注册你的昵称";
             }else {
                 $nickname = Common::cleanSpecialChars($nickname);
-            }
 
-            if (mb_strlen($nickname, 'utf-8') < 2 || mb_strlen($nickname, 'utf-8') > 5) {
-                $err = "昵称至少 2 个汉字，最多 5 个汉字，请按规则填写";
+                if (mb_strlen($nickname, 'utf-8') < 2 || mb_strlen($nickname, 'utf-8') > 5) {
+                    $err = "昵称至少 2 个汉字，最多 5 个汉字，请按规则填写";
+                }
             }
 
             if (empty($err)) {      //如果数据检查通过，尝试保存
@@ -1359,6 +1359,10 @@ eof;
                 $err = "请填写新账号的昵称";
             }else {
                 $new_nickname = Common::cleanSpecialChars($new_nickname);
+
+                if (mb_strlen($new_nickname, 'utf-8') < 2 || mb_strlen($new_nickname, 'utf-8') > 5) {
+                    $err = "昵称至少 2 个汉字，最多 5 个汉字，请按规则填写";
+                }
             }
 
             if (empty($err)) {      //如果数据检查通过，尝试保存
