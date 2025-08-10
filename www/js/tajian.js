@@ -218,7 +218,8 @@ if ($('.bt_sms_JS').get(0)) {
         };
         publicAjax(taJian.apis.sendSmsCode, 'POST', datas, function (data) {
             if (data.code == 0 && data.err) {
-                alert(data.err);
+                //alert(data.err);
+                $('.sms_tip_JS').text(data.err);
             }else {
                 $('.sms_tip_JS').text(data.msg);
                 if (typeof(data.autofill) != 'undefined' && data.autofill) {

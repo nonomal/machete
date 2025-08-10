@@ -54,7 +54,7 @@ if (!empty(FSC::$app['config']['multipleUserUriParse']) && !empty(FSC::$app['use
                         <li><a href="/site/terms" target="_blank">Terms</a></li>
                         <li><a href="/site/privacy" target="_blank">Privacy</a></li>
                         <li>
-                            <a href="https://herounion.filesite.io" target="_blank">HeroUnion</a>
+                            <a href="https://herounion.website" target="_blank">HeroUnion</a>
                         </li>
                         <li><a href="https://github.com/filesite-io/machete" target="_blank">源码下载</a></li>
                     </ul>

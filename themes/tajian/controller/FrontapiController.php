@@ -682,7 +682,12 @@ eof;
 
                 //发送之前先查询当天该手机号码的发送情况，并根据发送结果来决定是否发送验证码短信
                 $api_query = FSC::$app['config']['service_3rd_api_domain'] . '/aliyun/querysendresult/';
-                $res_query = $this->request($api_query, json_encode($params), $timeout, $pc, $headers);
+                //$res_query = $this->request($api_query, json_encode($params), $timeout, $pc, $headers);
+                //由于aliyun短信功能不再支持个人身份开通，关闭短信验证码发送功能
+                $res_query = array(
+                    'status' => 200,
+                    'result' => '{"code":1, "rescode":2}',
+                );
                 if (!empty($res_query) && $res_query['status'] == 200) {
                     $resData = json_decode($res_query['result'], true);
                     if ($resData['code'] == 1) {

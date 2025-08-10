@@ -376,7 +376,14 @@ Class Common {
                     array_merge($map, $tajian_user_map[$cellphone]) : array_push($map, $tajian_user_map[$cellphone]);
         }
 
-        return array_values(array_unique($map));
+        $dirs = array_values(array_unique($map));
+
+        //把自己的默认id插入到最前面，确保在切换目录的时候可选
+        if (!in_array($my_id, $dirs)) {
+            array_unshift($dirs, $my_id);
+        }
+
+        return $dirs;
     }
 
     public static function getNicknameByDir($dir, $username){
@@ -384,7 +391,7 @@ Class Common {
         $dirPath = str_replace("/{$username}", "/{$dir}", $rootDir);
         $filepath = "{$dirPath}/README_nickname.txt";
 
-        $nickname = '';
+        $nickname = $dir;       //默认昵称跟id相同
         if (file_exists($filepath)) {
             $nickname = file_get_contents($filepath);
             if (!empty($nickname)) {

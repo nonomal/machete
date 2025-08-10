@@ -32,7 +32,7 @@ eof;
                 }
             }else {
                 echo <<<eof
-            <li><a href="/site/logout">退出重新登录</a></li>
+            <li>你还没有子账号，<a href="/my/createdir">马上创建</a></li>
 eof;
             }
             ?>

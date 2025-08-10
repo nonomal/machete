@@ -605,4 +605,16 @@ Class SiteController extends Controller {
         return $this->render($viewName, $params, $pageTitle);
     }
 
+    //Wakeup
+    public function actionWakeup() {
+        $pageTitle = "Ta荐不只是工具，是一种生活方式，更是视频时代中的觉醒！| TaJian.tv";
+
+        $this->layout = 'index';
+        $viewName = 'wakeup';
+        $params = compact(
+                'pageTitle'
+            );
+        return $this->render($viewName, $params, $pageTitle);
+    }
+
 }

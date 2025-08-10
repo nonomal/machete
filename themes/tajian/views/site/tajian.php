@@ -44,7 +44,7 @@ $loginBackUrl = !empty($viewData['loginedUser']['username']) ? "/{$viewData['log
                     </div>
                     */ ?>
                 </div>
-                <div class="mt10"><a href="https://zhuanlan.zhihu.com/p/1904181970277210072" target="_blank">不只是工具，更是视频时代的觉醒！</a></div>
+                <div class="mt10"><a href="/site/wakeup" target="_blank">不只是工具，更是视频时代中的觉醒！</a></div>
 
                 <div class="hero-browser">
                     <div class="bubble-3 is-revealing">

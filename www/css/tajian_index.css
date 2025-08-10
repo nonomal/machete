@@ -304,6 +304,10 @@ main{flex:1 0 auto}
 .terms h3{text-align:center;margin-bottom:1em}
 
 
+.thumbs{margin-bottom:1em}
+.thumbs img{display:inline-block;width:45%;margin:0 5px;border-radius:8px}
+
+
 @media (max-width:640px){
 .terms{max-width:95%}
 .hero-title small{display:block}
