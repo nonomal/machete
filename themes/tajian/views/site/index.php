@@ -75,7 +75,7 @@ eof;
         </div>
         <div class="video_title_vl">
             <a href="{$file['shortcut']['url']}" target="_blank">
-                <span class="duration">{$platform}</span>
+                <span class="platform">{$platform}</span>
                 <strong>{$pubDate}，{$title}</strong>
             </a>
         </div>

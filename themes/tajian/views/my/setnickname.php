@@ -11,8 +11,8 @@ if (!empty(FSC::$app['config']['multipleUserUriParse']) && !empty(FSC::$app['use
     <form class="g_form_style mt65" id="nickname_form" action="" method="POST">
         <div class="mb-3 pt20">
             <label for="text_input_nickname" class="form-label">昵称</label>
-            <input id="text_input_nickname" name="nickname" placeholder="请填写 2 - 5 个汉字" value="<?=$viewData['nickname']?>">
-            <p class="mt10">请填写 2 - 5 个汉字</p>
+            <input id="text_input_nickname" name="nickname" placeholder="请填写 2 - 10 个汉字" value="<?=$viewData['nickname']?>">
+            <p class="mt10">请填写 2 - 10 个汉字</p>
         </div>
         <div class="avform_bt">
             <button class="jsbtn" aria-label="保存" type="submit">

@@ -129,24 +129,19 @@ eof;
 
     <?php if (in_array(FSC::$app['controller'], array('site', 'my')) && FSC::$app['action'] == 'index') { ?>
     <div class="footer">
-        <div class="copyright">
-            从GitHub下 <a href="https://github.com/filesite-io/machete" target="_blank">Filesite/Machete源码</a> 部署到本地
-            <br>
-            数据采集由
-            <a href="https://herounion.website" target="_blank">HeroUnion英雄联盟</a>
-            提供技术支持
-            <br>
-            <a href="https://filesite.io" target="_blank">&copy;FileSite.io</a> 2022，耗时 {page_time_cost} ms
+        <div class="footimg vercenter">
+            <a class="log_tn clearfix" href="/" title="<?php echo $pageTitle; ?>">
+                <span class="verBaseline">Ta荐</span>
+                - TaJian.tv
+            </a>
+            <p>
+                你看到的，也许只是冰山一角！
+                <br>
+                <img src="/img/bg/ice_3.jpeg" alt="水面上的冰山一角">
+                <br><br>
+                &copy;2022，耗时 {page_time_cost} ms
+            </p>
         </div>
-    </div>
-
-    <div class="footimg vercenter">
-        <a class="log_tn clearfix" href="/" title="<?php echo $pageTitle; ?>">
-            <span class="verBaseline">Ta荐</span>
-            - TaJian.tv
-        </a>
-        <p>你看到的，也许只是冰山一角！</p>
-        <img src="/img/bg/ice_3.jpeg" alt="水面上的冰山一角">
     </div>
     <?php } ?>
 

@@ -209,7 +209,7 @@ if ($('.bt_sms_JS').get(0)) {
         }
 
         autoRestoreSmsBtn();
-        
+
         //调用api发送验证码
         var cellphone = $('input[name=username]').val();
         var datas = {
@@ -220,6 +220,7 @@ if ($('.bt_sms_JS').get(0)) {
             if (data.code == 0 && data.err) {
                 //alert(data.err);
                 $('.sms_tip_JS').text(data.err);
+                $('.bt_sms_JS').hide();
             }else {
                 $('.sms_tip_JS').text(data.msg);
                 if (typeof(data.autofill) != 'undefined' && data.autofill) {
@@ -352,7 +353,7 @@ if ($('#nickname_form').get(0)) {
         var nickname = $('input[name=nickname]').val();
 
         if (!nickname) {
-            alert('请填写 2 - 5 个汉字的昵称！');
+            alert('请填写 2 - 10 个汉字！');
             return false;
         }
 
@@ -762,5 +763,16 @@ if ($('.cookie-banner').get(0)) {
         });
     });
 }
+
+// ga event send
+$('a').click(function(e) {
+    if (typeof(gtag) == 'undefined') {return true;}
+
+    try {
+        gtag('event', 'click_a_link', {'link': e.target.href});
+    }catch(err) {
+        console.error('GA event fire failed', err);
+    }
+});
 
 })();

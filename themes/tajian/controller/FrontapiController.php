@@ -628,7 +628,7 @@ eof;
         $ip = $this->getUserIp();
         $check_key = "sendsmscode_{$ip}";
         $check_time = 300;          //5 分钟内
-        $max_time_in_minutes = 3;   //最多 3 次
+        $max_time_in_minutes = 10;   //最多 10 次
 
         $isUserGotRequestLimit = $this->requestLimit($check_key, $max_time_in_minutes, $check_time);
         if ($isUserGotRequestLimit) {
@@ -683,18 +683,20 @@ eof;
                 //发送之前先查询当天该手机号码的发送情况，并根据发送结果来决定是否发送验证码短信
                 $api_query = FSC::$app['config']['service_3rd_api_domain'] . '/aliyun/querysendresult/';
                 //$res_query = $this->request($api_query, json_encode($params), $timeout, $pc, $headers);
+
                 //由于aliyun短信功能不再支持个人身份开通，关闭短信验证码发送功能
                 $res_query = array(
                     'status' => 200,
                     'result' => '{"code":1, "rescode":2}',
                 );
+
                 if (!empty($res_query) && $res_query['status'] == 200) {
                     $resData = json_decode($res_query['result'], true);
                     if ($resData['code'] == 1) {
                         if ($resData['rescode'] == 2) {
                             $code = 1;
                             $autofill = $sms_code;
-                            $msg = '验证码发送失败了，已帮你自动填上';
+                            $msg = '验证码已帮你填上，请点下面按钮继续';
                         }else if ($resData['rescode'] == 3) {
                             $code = 1;
                             $msg = '之前的验证码依然有效，请直接使用';
@@ -913,8 +915,8 @@ eof;
             }else {
                 $nickname = Common::cleanSpecialChars($nickname);
 
-                if (mb_strlen($nickname, 'utf-8') < 2 || mb_strlen($nickname, 'utf-8') > 5) {
-                    $err = "昵称至少 2 个汉字，最多 5 个汉字，请按规则填写";
+                if (mb_strlen($nickname, 'utf-8') < 2 || mb_strlen($nickname, 'utf-8') > 10) {
+                    $err = "昵称至少 2 个汉字，最多 10 个汉字，请按规则填写";
                 }
             }
 

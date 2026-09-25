@@ -2,7 +2,8 @@
     <form class="add_video_form g_form_style mt65" id="login_form" action="" method="POST">
         <div class="mb-3 pt20">
             <label for="text_input_username" class="form-label">手机号码</label>
-            <input id="text_input_username" name="username" placeholder="请填写手机号码" type="text">
+            <input id="text_input_username" name="username" placeholder="请填写中国大陆手机号码" type="text">
+            <?php /*<p><small>如需体验，请<a href="/site/contact/">联系我们</a></small></p>*/ ?>
         </div>
         <div class="mb-3 twocol">
             <label for="text_input_sm" class="form-label">验证码</label>

@@ -44,7 +44,7 @@ $loginBackUrl = !empty($viewData['loginedUser']['username']) ? "/{$viewData['log
                     </div>
                     */ ?>
                 </div>
-                <div class="mt10"><a href="/site/wakeup" target="_blank">不只是工具，更是视频时代中的觉醒！</a></div>
+                <div class="mt10"><a href="/site/wakeup" target="_blank">不只是工具，更是视频时代的觉醒者！</a></div>
 
                 <div class="hero-browser">
                     <div class="bubble-3 is-revealing">
@@ -255,9 +255,9 @@ $loginBackUrl = !empty($viewData['loginedUser']['username']) ? "/{$viewData['log
                     </a>
                 </div>
                 <div class="control" style="min-width:33.33%">
-                    <a class="button button-block button-shadow" href="/1003" target="_blank">
+                    <a class="button button-block button-shadow" href="/2006" target="_blank">
                         <img class="btn_icon" src="/img/avatar/ai-bot.svg" alt="ai-bot svg">
-                        秒懂AI
+                        千里眼
                     </a>
                 </div>
                 <div class="control" style="min-width:33.33%">

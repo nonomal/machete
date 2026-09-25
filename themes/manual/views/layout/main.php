@@ -43,5 +43,8 @@ include_once $viewFile;
     <!--for theme manual-->
     <script src="/js/manual.js?v<?=Html::getStaticFileVersion('manual.js', 'js')?>"></script>
     <?php echo Html::getGACode(); ?>
+    <!--adsense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8863174955399329"
+     crossorigin="anonymous"></script>
 </body>
 </html>

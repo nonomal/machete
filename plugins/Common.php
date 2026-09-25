@@ -286,6 +286,12 @@ Class Common {
     //判断某个收藏夹是否属于当前用户
     public static function isMyFavDir($cellphone, $username, $fav_dir) {
         try {
+            //优先检查是否是自己的默认id
+            $my_id = self::getUserId($cellphone);
+            if ($my_id == $fav_dir) {
+                return true;
+            }
+
             $rootDir = __DIR__ . '/../www/' . FSC::$app['config']['content_directory'];
             $rootDir = str_replace("/{$username}", '', $rootDir);   //获取当前收藏夹的上一级目录
 

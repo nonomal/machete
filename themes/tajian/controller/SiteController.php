@@ -607,7 +607,7 @@ Class SiteController extends Controller {
 
     //Wakeup
     public function actionWakeup() {
-        $pageTitle = "Ta荐不只是工具，是一种生活方式，更是视频时代中的觉醒！| TaJian.tv";
+        $pageTitle = "Ta荐不只是工具，是一种生活方式，更是视频时代的觉醒者！| TaJian.tv";
 
         $this->layout = 'index';
         $viewName = 'wakeup';
